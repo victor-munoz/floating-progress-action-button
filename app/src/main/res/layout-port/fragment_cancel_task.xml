@@ -1,0 +1,282 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".DemoFragment">
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:elevation="6dp"
+        app:srcCompat="@drawable/ic_ready2"/>
+    <com.victormunoz.material.widget.FloatingProgressActionButton
+        android:id="@+id/myFab"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/ic_ready2"
+
+        />
+
+     android:layout_margin="60dp"
+        android:layout_marginEnd="67dp"
+        app:elevation="6dp"
+        app:srcCompat="@drawable/ic_ready2"
+        app:progressWidth="20dp"
+        app:colorTintSuccess="#ff127854"
+        app:colorTintFailure="#ff999999"
+        app:colorProgressPrimary="#ff663333"
+        app:colorProgressSecondary="#ffffff33"
+        app:progressShowTime="4000"
+        app:progressHideTime="800"
+        app:isIndeterminate="true"
+        app:failureShowTime="800"
+        app:failureStayTime="1200"
+        app:successShowTime="800"
+        app:successStayTime="1200"
+        app:readyShowTime="1200"
+
+
+    <!--Progress Settings-->
+    <LinearLayout
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/tv_label"
+            android:text="Progress"
+            />
+        <!--switch progress type-->
+        <LinearLayout
+            style="@style/ll_settings">
+            <TextView
+                style="@style/tv_settings_label"
+                android:layout_height="wrap_content"
+                android:text="Set Indeterminate"
+                />
+            <Switch
+                android:id="@+id/switch_indeterminate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
+        <!--progress width-->
+        <LinearLayout style="@style/ll_settings">
+
+            <TextView
+                style="@style/tv_settings_label"
+                android:layout_height="wrap_content"
+                android:text="Width" />
+
+            <TextView
+                android:id="@+id/tv_progress_width"
+                style="@style/tv_settings_value"
+                android:text="10" />
+
+            <SeekBar
+                android:id="@+id/sb_progress_width"
+                style="@style/tv_settings_seekbar"
+                android:max="19"
+                android:progress="2" />
+        </LinearLayout>
+        <!--show Progress-->
+        <LinearLayout style="@style/ll_settings">
+
+            <TextView
+                style="@style/tv_settings_label"
+                android:id="@+id/tv_label_show_progress"
+                android:text="Show Time" />
+
+            <TextView
+                android:id="@+id/tv_show_progress"
+                style="@style/tv_settings_value"
+                android:text="200" />
+
+            <SeekBar
+                android:id="@+id/sb_show_progress"
+                style="@style/tv_settings_seekbar"
+                android:max="@integer/duration_max"
+                android:progress="2" />
+
+        </LinearLayout>
+        <!--hide Progress-->
+        <LinearLayout style="@style/ll_settings">
+
+            <TextView
+                style="@style/tv_settings_label"
+                android:id="@+id/tv_label_hide_progress"
+                android:text="Hide Time" />
+
+            <TextView
+                android:id="@+id/tv_hide_progress"
+                style="@style/tv_settings_value"
+                android:text="200" />
+
+            <SeekBar
+                android:id="@+id/sb_hide_progress"
+                style="@style/tv_settings_seekbar"
+                android:max="@integer/duration_max"
+                android:progress="2" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Success Animation Settings-->
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_marginTop="4dp"
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView  style="@style/tv_label"
+        android:text="Success" />
+    <!--show Success-->
+    <LinearLayout style="@style/ll_settings">
+
+        <TextView
+            style="@style/tv_settings_label"
+            android:id="@+id/tv_label_show_sucess"
+            android:text="Show Time" />
+
+        <TextView
+            android:id="@+id/tv_show_sucess"
+            style="@style/tv_settings_value"
+            android:text="400" />
+
+        <SeekBar
+            android:id="@+id/sb_show_success"
+            style="@style/tv_settings_seekbar"
+            android:max="@integer/duration_max"
+            android:progress="@integer/progress_default" />
+
+    </LinearLayout>
+    <!--time Success-->
+    <LinearLayout style="@style/ll_settings">
+
+        <TextView
+            style="@style/tv_settings_label"
+            android:id="@+id/tv_label_time_success"
+            android:text="Duration" />
+
+        <TextView
+            android:id="@+id/tv_time_success"
+            style="@style/tv_settings_value"
+            android:text="1200" />
+
+        <SeekBar
+            android:id="@+id/sb_time_success"
+            style="@style/tv_settings_seekbar"
+            android:max="@integer/duration_max"
+            android:progress="12" />
+
+    </LinearLayout>
+        </LinearLayout>
+    <!--Failure Animation Settings-->
+    <LinearLayout
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+    <TextView style="@style/tv_label"
+        android:text="Failure"
+        />
+    <!--show Failure-->
+    <LinearLayout style="@style/ll_settings">
+
+        <TextView
+            android:id="@+id/tv_label_show_failure"
+            style="@style/tv_settings_label"
+            android:text="Show Time" />
+
+        <TextView
+            android:id="@+id/tv_show_failure"
+            style="@style/tv_settings_value"
+            android:text="400" />
+
+        <SeekBar
+            android:id="@+id/sb_show_failure"
+            style="@style/tv_settings_seekbar"
+            android:max="@integer/duration_max"
+            android:progress="@integer/progress_default" />
+
+    </LinearLayout>
+    <!--time Failure-->
+    <LinearLayout style="@style/ll_settings">
+
+        <TextView
+            android:id="@+id/tv_label_time_Failure"
+            style="@style/tv_settings_label"
+            android:text="Duration" />
+
+        <TextView
+            android:id="@+id/tv_time_Failure"
+            style="@style/tv_settings_value"
+            android:text="1200" />
+
+        <SeekBar
+            android:id="@+id/sb_time_failure"
+            style="@style/tv_settings_seekbar"
+            android:max="@integer/duration_max"
+            android:progress="12" />
+
+    </LinearLayout>
+        </LinearLayout>
+    <!--Ready Animator Settings-->
+    <LinearLayout
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView  style="@style/tv_label"
+        android:text="Ready"
+         />
+    <!--time Ready-->
+    <LinearLayout style="@style/ll_settings">
+
+        <TextView
+            android:id="@+id/tv_label_time_ready"
+            style="@style/tv_settings_label"
+            android:text="Show Time " />
+
+        <TextView
+            android:id="@+id/tv_time_ready"
+            style="@style/tv_settings_value"
+            android:text="400" />
+
+        <SeekBar
+            android:id="@+id/sb_time_ready"
+            style="@style/tv_settings_seekbar"
+            android:max="@integer/duration_max"
+            android:progress="@integer/progress_default" />
+    </LinearLayout>
+        </LinearLayout>
+    <!--action buttons-->
+    <TextView  style="@style/tv_label"
+        android:text="Actions"
+        />
+    <LinearLayout style="@style/ll_settings">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="failure" />
+
+        <Button
+            android:id="@+id/orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="orientation" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Material FAB Progress</string>
+    <string name="path_success">M4.12 12.705 L9 17.585 20.295 6.295</string>
+    <string name="path_failure_backslash_end">M5.705 5.705 L18.295 18.295</string>
+    <string name="path_failure_slash_end">M18.295 5.705 L5.705 18.295</string>
+</resources>

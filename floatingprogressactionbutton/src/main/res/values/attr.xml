@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatingProgressActionButton">
+        <attr name="progressWidth" format="dimension" />
+        <attr name="colorTintSuccess" format="color"/>
+        <attr name="colorTintFailure" format="color"/>
+        <attr name="colorProgressPrimary" format="color"/>
+        <attr name="colorProgressSecondary" format="color"/>
+        <attr name="isIndeterminate" format="boolean"/>
+        <attr name="progressShowTime" format="integer" min="0"/>
+        <attr name="progressHideTime" format="integer" min="0"/>
+        <attr name="successShowTime" format="integer" min="0"/>
+        <attr name="successStayTime" format="integer" min="0"/>
+        <attr name="failureShowTime" format="integer" min="0"/>
+        <attr name="failureStayTime" format="integer" min="0"/>
+        <attr name="readyShowTime" format="integer" min="0"/>
+    </declare-styleable>
+</resources>
