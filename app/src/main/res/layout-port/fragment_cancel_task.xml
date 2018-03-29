@@ -8,11 +8,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".DemoFragment">
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        app:elevation="6dp"
-        app:srcCompat="@drawable/ic_ready2"/>
+
     <com.victormunoz.material.widget.FloatingProgressActionButton
         android:id="@+id/myFab"
         android:layout_width="64dp"
@@ -20,26 +16,6 @@
         app:srcCompat="@drawable/ic_ready2"
 
         />
-
-     android:layout_margin="60dp"
-        android:layout_marginEnd="67dp"
-        app:elevation="6dp"
-        app:srcCompat="@drawable/ic_ready2"
-        app:progressWidth="20dp"
-        app:colorTintSuccess="#ff127854"
-        app:colorTintFailure="#ff999999"
-        app:colorProgressPrimary="#ff663333"
-        app:colorProgressSecondary="#ffffff33"
-        app:progressShowTime="4000"
-        app:progressHideTime="800"
-        app:isIndeterminate="true"
-        app:failureShowTime="800"
-        app:failureStayTime="1200"
-        app:successShowTime="800"
-        app:successStayTime="1200"
-        app:readyShowTime="1200"
-
-
     <!--Progress Settings-->
     <LinearLayout
         android:background="@android:color/white"
